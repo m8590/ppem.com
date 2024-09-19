@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallopers - Welcome Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            opacity: 0;
+            transform: scale(0);
+            animation: popUp 1s forwards ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .animated-character {
+            width: 150px;
+            height: 150px;
+            margin: 40px auto;
+            background-image: url('https://img.freepik.com/free-vector/call-center-assistant-helping-customers_23-2148192098.jpg'); /* Replace with your character image */
+            background-size: cover;
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            animation: popUp 1.5s forwards ease-in-out 1s; /* Delay by 1s to pop up after the header */
+        }
+
+        .welcome-message {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0);
+            animation: popUp 2s forwards ease-in-out 2s; /* Delay by 2s to pop up after the character */
+        }
+
+        /* Pop-up Animation */
+        @keyframes popUp {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            opacity: 0;
+            transform: scale(0);
+            animation: popUp 1.5s forwards ease-in-out 3s; /* Delay by 3s to pop up after everything */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Gallopers Network</h1>
+    </header>
+
+    <section>
+        <!-- Animated Character or Object -->
+        <div class="animated-character"></div>
+
+        <!-- Welcome Message -->
+        <p class="welcome-message">We are thrilled to have you here!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gallopers Network - All Rights Reserved</p>
+    </footer>
+<a href="comment.html">comment</a>
+</body>
+</html>

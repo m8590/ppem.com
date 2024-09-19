@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallopers - Gallery</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Page Background */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:url(https://scontent-mad2-1.xx.fbcdn.net/v/t45.5328-4/408845789_24312943328353364_5276691608496834482_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=9d8154&_nc_eui2=AeFpW9EaVhX6eaHuFuwOe6SRCn2dqsU8CYwKfZ2qxTwJjN4pEip2MABV2768WMRoHIXZe7gaygqOL38HCLhNR0NT&_nc_ohc=WQPLyyPgpjAQ7kNvgHC7FZw&_nc_ht=scontent-mad2-1.xx&oh=00_AYBRWFK-RSvvNnZ7_2QhpUFd93PC2nYmr1ImgXu7pZIlQQ&oe=66EF8AE7);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header Styles */
+    header {
+      background: #6a6a25;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .nav-bar a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .nav-bar a:hover {
+      background: #0056b3;
+      border-radius: 5px;
+    }
+
+    /* Main Content Styles */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer Styles */
+    footer {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#community">Community</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Gallery Section -->
+    <div class="section" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/448926451_1135351207654877_8243310477285463277_n.jpg?stp=dst-jpg_p180x540&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEkgoGQC3ey1X2NaxwM33297SZSmOhfGEPtJlKY6F8YQ5grRNB43ed9-PMrD1rGxLD6pnHdrOfevYBa1QzolJip&_nc_ohc=KC-wBZK8OjcQ7kNvgE_ZL2F&_nc_ht=scontent-mad1-1.xx&_nc_gid=AuI5FgXTlwvxSXxOZg_qfMY&oh=00_AYBHPhnKZEcClG_Z-wrg5sjz1_ZQcOY7i34YDq6oRniDBQ&oe=66EF7D6E" alt="Gallery Image 1">
+        <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/447246610_1121964125660252_4889481594625335819_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHQOkOwGuoB0RBfNDdEGLdLqbaScR9TSnWptpJxH1NKdXzlUpY7wvtFLyIop134ZEG_jCTOfz_qrb_NPLhDfby2&_nc_ohc=fVmQx7nauCsQ7kNvgEvVAP5&_nc_ht=scontent-mad2-1.xx&_nc_gid=AFtbpO6xusvR82ev21xnZAr&oh=00_AYCKUmvVPN7fBHIQT2zLcrWIzQ9PuU_4-TJqTbKZ0ASecQ&oe=66EF6BEC" alt="Gallery Image 2">
+        <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/36469432_173778880146384_3305680897159725056_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHjafTbWYZ6JMTSZdbyuUGkKuPe-BjOF4Mq4974GM4Xg-gPQ0uCVE-x5DAfxU_Cec_dYLH2vF7XrBuykdDs9xfk&_nc_ohc=jjOV8JCRvDAQ7kNvgGgOCfW&_nc_ht=scontent-mad2-1.xx&oh=00_AYDJkgrSW_G6BUnshcXTL8LuglyK7Ysb8fKTi5KgGIZLZA&oe=671110B6" alt="Gallery">
+        <img src="https://www.avigallopers.org/static/758409ccc27ba131da700af3cc45717e/a72b0/conference-Tamale5.jpg" alt="Gallery Image 4">
+        <img src="https://www.avigallopers.org/static/37e7fa7e8c60292a9379d4c4abf73ecd/3d7ec/conference-Tamale4.jpg" alt="Gallery Image 5">
+        <img src="https://www.avigallopers.org/static/0c663aa69fcab80b5f025ad6f5be2fb6/35ece/conference-Tamale8.jpg" alt="Gallery Image 6">
+        <img src="https://www.avigallopers.org/static/6fbd5fbc991e2716bb2459ae65cd9d08/9f8c1/conference-mentorship-impacts-St-Paul2.jpg" alt="Gallery Image 6">
+        <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/441155039_1108412307015434_1572896178696451025_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFAV25uLaUINntRYG3YNRHaslccLKvSzo2yVxwsq9LOjUvUiNwiMCc7bSI6SK7oDuk7PgzgCvvBFx2yTETztxHd&_nc_ohc=S_V1D-rVXUcQ7kNvgEHhvpo&_nc_ht=scontent-mad1-1.xx&_nc_gid=AeBeY5DlQkSsuG_e2bD4cvS&oh=00_AYD6xih8ZnOEujJoaCx0IqKfFjA5DfAd9pGSbUAtTSpDug&oe=66F0A1EB" alt="Gallery Image 6">
+        <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/438925770_1103881720801826_7012739402382588091_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGQo8cm8yjCW31lTE6HkHY1reYQ5SPMqAGt5hDlI8yoAX-l4VvTCYgtnjIPd0y4v4o_sLthO4gLtg4W8uFDD16y&_nc_ohc=fGt2jRGoaIwQ7kNvgFGu32d&_nc_ht=scontent-mad2-1.xx&_nc_gid=Aup-xNnA8nJ-FloFAiQtcGe&oh=00_AYBxf_jBqVl3QWeQ8VcTsqT8z6rWrEFmSnNB0jQR0S_35Q&oe=66F0A8C8" alt="Gallery Image 6">
+        <img src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/408169349_1017775886079077_4001394504674799554_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFM73bn2eIIRhHZDzXqBx3EnLrIrIRvKFucusishG8oW1Gn23R23SmZ1HY85DVF7_P73LaEETNHoNcHyaQotwtq&_nc_ohc=u7qmCG12p3oQ7kNvgGRQyXs&_nc_ht=scontent-mad2-1.xx&_nc_gid=AeMTX4sx_d5AvTB9C1QtAiS&oh=00_AYAj1YSbs6Sa-vtf-GPG7FxTS-0TplYPVxnrzrMR6t7IVQ&oe=66F0A6FA" alt="Gallery Image 6">
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Gallopers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
